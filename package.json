@@ -1,0 +1,88 @@
+{
+  "_from": "github:RiseVision/rise-ts-old",
+  "_id": "risejs@1.1.4",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/risejs",
+  "_phantomChildren": {
+    "follow-redirects": "1.5.10",
+    "is-buffer": "1.1.6"
+  },
+  "_requested": {
+    "type": "git",
+    "raw": "RiseVision/rise-ts-old",
+    "rawSpec": "RiseVision/rise-ts-old",
+    "saveSpec": "github:RiseVision/rise-ts-old",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "github:RiseVision/rise-ts-old#2feddc1dc34a26330934a5b334c9854c110fdb9f",
+  "_spec": "RiseVision/rise-ts-old",
+  "_where": "/var/www/altilly/altillywebapp/nodeapps",
+  "author": {
+    "name": "Andrea Baccega",
+    "email": "vekexasia+crypto@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/risevision/rise-js-sdk/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.16.2"
+  },
+  "deprecated": false,
+  "description": "Rise SDK built in Node.js",
+  "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.29",
+    "@types/sinon": "^2.3.1",
+    "assert": "1.4.1",
+    "chai": "^4.0.2",
+    "gulp": "^3.9.1",
+    "mocha": "^3.4.2",
+    "pug": "^2.0.0-rc.2",
+    "shx": "^0.2.2",
+    "sinon": "^2.3.2",
+    "ts-loader": "^2.1.0",
+    "ts-node": "^3.0.6",
+    "tslib": "^1.7.1",
+    "typedoc": "^0.7.1",
+    "typedoc-clarity-theme": "^1.1.0",
+    "typedoc-plugin-internal-external": "^1.0.9",
+    "typescript": "~2.3.4",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "webpack": "^2.6.1"
+  },
+  "homepage": "https://github.com/risevision/rise-js-sdk#readme",
+  "keywords": [
+    "rise",
+    "vision",
+    "sdk",
+    "crypto",
+    "currency",
+    "risevision",
+    "cryptocurrency",
+    "alt",
+    "coin",
+    "altcoin"
+  ],
+  "license": "MIT",
+  "main": "dist/es5/index.js",
+  "name": "risejs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risevision/rise-js-sdk.git"
+  },
+  "scripts": {
+    "docs": "shx rm -rf docs ; typedoc -exclude \"**/apis/**\" --theme node_modules/typedoc-clarity-theme/bin --excludePrivate --disableOutputCheck --hideGenerator --module commonjs --mode file --tsconfig ./tsconfig.json  --out docs/ src/; touch docs/.nojekyll ",
+    "package": "shx rm -rf ./dist/; tsc --outDir dist/es5 --target es5 -d && webpack",
+    "prepublish": "shx rm -rf ./dist/ && npm run package"
+  },
+  "types": "dist/es5/index.d.ts",
+  "version": "1.1.4"
+}
