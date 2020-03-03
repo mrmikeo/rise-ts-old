@@ -35,6 +35,14 @@ export const transactions = (rs: rs): TransactionsAPI => ({
     }, callback);
   },
 
+  put(transaction: Transaction<T>, callback?: cback<any>) {
+    return rs({
+      path: '/transactions',
+      method: 'PUT',
+      data: {transaction}
+    }, callback);
+  },
+    
   getUnconfirmedTransactions(callback?: cback<{ transactions: Transaction<any>[] }>) {
     return rs({
       path: '/transactions/unconfirmed'
