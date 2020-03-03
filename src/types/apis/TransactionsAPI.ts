@@ -20,6 +20,8 @@ export interface TransactionsAPI {
 
   send(conf: { secret: string, amount: number, recipientId: string, publicKey?: string, secondSecret?: string }, callback?: cback<{ transactionId: string }>): Promise<{ transactionId: string } & BaseApiResponse>
 
+  put(tx: Array<BaseTransaction<any> & {senderId: string}>|(BaseTransaction<any> & {senderId: string}), callback?: cback<void>): Promise<BaseApiResponse>
+
   getUnconfirmedTransactions(callback?: cback<{ transactions: Transaction<any>[] }>): Promise<{ transactions: Transaction<any>[] } & BaseApiResponse>
 
   getUnconfirmedTransaction(id: string, callback?: cback<{ transactions: Transaction<any>[] }>): Promise<{ transactions: Transaction<any>[] } & BaseApiResponse>
